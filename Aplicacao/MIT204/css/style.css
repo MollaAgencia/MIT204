@@ -1,0 +1,287 @@
+
+
+/* --- colors --- */
+:root{
+	--text-primary: #007bff !important;
+	--text-secondary: #6c757d!important;
+	--bg-primary: #007bff!important;
+	--bg-secondary: #6c757d!important;
+}
+/* --- tag section --- */
+.height-full{
+	height: 100vh;	
+}
+.border-md{
+	border: 15px solid #fff;
+}
+.border-lg{
+	border: 20px solid #fff;
+}
+.rounded2{
+	border-radius: 15px;	
+}
+.img-planta img{
+	position: absolute;
+	top: 480px;
+	right: 0;
+	width: 450px;
+	height: 300px;
+	opacity: 0.5;
+	z-index: 2;
+}
+
+/* --- menu --- */
+nav.mt-md-2,
+nav.mt-md-5{
+	transition: .5s;
+}
+
+/* --- carousel/slide home --- */
+.carousel-fade{
+	width: 70%;
+}
+.carousel-inner{
+	text-align: center;
+}
+.carousel-indicators{
+	position: relative;
+	margin-top: 30px !important;
+}
+.carousel-indicators li{
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	margin: 0 4px;
+}
+
+/* --- header and footer --- */
+.bg-img-primary {
+  	position: relative;
+  	/*color: white;*/
+  	background: -webkit-linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),url(imagens/slides/banner-05.jpg) no-repeat center center;
+    background: -o-linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),url(imagens/slides/banner-05.jpg) no-repeat center center;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),url(imagens/slides/banner-05.jpg) no-repeat center center;
+    background-size: cover;	
+}
+
+/* --- Sobre --- */
+#sobre .img-bg-01{
+	position: relative;
+	height: 100%;
+}
+#sobre .img-bg-02{
+	position: absolute;
+	top: 10%;
+	bottom: 50%;
+	left: 40%;
+}
+
+/* --- Instalações --- */
+#instalacoes h2.h1{
+	margin: 40px 0 0 200px;
+}
+#instalacoes hr{
+	width: 200px;
+	border-top: 5px solid;
+	margin: 50px 0 10px 0;
+	padding: 0px;
+}
+#instalacoes .img-bg-01{
+	position: relative;
+	height: 100%;
+}
+#instalacoes .img-bg-02{
+	position: absolute;
+	top: 5%;
+	bottom: 50%;
+}
+
+/* --- Processos --- */
+#processos{
+	background-color: #eee;
+}
+#processos .bg-img-processos{
+	background: url(https://via.placeholder.com/1920x220?text=Imagem+de+fundo);
+	background-position: center center;
+	background-size: cover;
+	height: 230px;
+	padding-top: 35px;
+}
+#processos hr.hr1{
+	width: 200px;
+	border-top: 5px solid;
+	margin: 0;
+}
+#processos h2.h1{
+	margin: 0 0 0 200px;
+}
+#processos hr.hr2{
+	width: 300px;
+	border-top: 5px solid;
+	margin-top: -3px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#processos hr.hr3{
+	width: 300px;
+	border-top: 5px solid;
+	margin-top: -38px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* --- contato --- */
+#contato input{
+	border: none;
+	border-bottom: 1px solid;
+}
+#contato input,
+#contato textarea{
+	border-radius: 0;
+}
+#contato hr{
+	width: 200px;
+	border-top: 5px solid;
+	margin: 0;
+}
+#contato h2.h1{
+	margin: 0 0 0 200px;
+}
+#contato .alert{
+	font-size: 22px;
+	font-weight: bold;
+	width: 75%;
+	margin: 0 auto;
+}
+
+/* --- footer --- */
+footer .container{
+	padding-top: 35px;
+	padding-bottom: 35px;
+}
+
+/* --- Button Scroll top --- */
+#buttonTop{
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 15px;
+  right: 20px;
+  transition: background-color .3s, opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 999;
+}
+#buttonTop:hover {
+  cursor: pointer;
+  background-color: var(--text-primary);
+}
+#buttonTop.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* --- Barra de rolagem do navegador --- */
+::-webkit-scrollbar{width: 10px;height: 10px;}
+::-webkit-scrollbar-track-piece {background-color: var(--primary);}
+::-webkit-scrollbar-thumb:vertical{background-color: var(--secondary);height: 5px;}
+::-webkit-scrollbar-thumb:horizontal{background-color: var(--primary);width: 5px;}
+
+/* --- dispositivos com largura de até 768px --- */
+@media screen and (max-width: 768px){
+	/* --- height full --- */
+	.height-full{
+		height: auto!important;	
+	}
+	/* --- galho --- */
+	.img-planta img{
+		position: absolute;
+		top: 520px;
+		width: 150px;
+		height: auto;
+	}
+	/* --- home --- */
+	#home h1.display-3{
+		font-size: 40px;
+	}
+	#indicators{
+		margin: 0 auto;
+	}
+	/* --- sobre --- */
+	#sobre .col-12{
+		height: auto;
+	}
+	#sobre img.img-bg-01{
+		height: auto;
+	}
+	#sobre img.img-bg-02{
+		top: 8%;
+		left: 10%;
+		right: 10%;
+		width: 80%;
+	}
+	#sobre .w-50{
+		width: 100%!important;
+		margin-left: 40px;
+	}
+	/* --- instalacoes --- */
+	#instalacoes h2.h1{
+		margin: 40px 0 0 50px;
+		font-size: 30px;
+	}
+	#instalacoes hr{
+		width: 50px;
+	}
+	#instalacoes img.img-bg-01{
+		height: auto;
+	}
+	#instalacoes img.img-bg-02{
+		top: 15%;
+		left: 5%;
+		right: 5%;
+		width: 90%;
+	}
+	/* --- Processos --- */
+	#processos h2.h1{
+		margin: 0 0 0 50px;
+		font-size: 30px;
+	}
+	#processos hr.hr1{
+		width: 50px;
+	}
+	#processos hr.hr2,
+	#processos hr.hr3{
+		width: 100px;
+	}
+	#processos hr.hr3{
+		margin-bottom: -2px;
+	}
+	#processos .w-75{
+		width: 90%!important;
+	}
+	#processos h2{
+		font-size: 26px;
+	}
+	/* --- Tratamento --- */
+	#tratamento h2.h1{
+		font-size: 30px;
+	}
+	/* --- Contato --- */
+	#contato hr{
+		width: 50px;
+	}
+	#contato h2.h1{
+		margin: 0 0 0 50px;
+		font-size: 30px;
+	}
+	#contato .alert{
+		font-size: 16px;
+		width: 100%;
+	}
+	#contato .btn{
+		width: 100%;
+	}
+}
