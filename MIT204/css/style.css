@@ -1,13 +1,60 @@
 
+/* --- font --- */
+@font-face {
+    font-family: GillSansStd;
+    src: url('../font/GillSansStd.otf');
+    letter-spacing: 3px!important;
+}
+body{
+	font-family: GillSansStd, Arial;
+}
 
-/* --- colors --- */
+/* --- root colors --- */
 :root{
-	--text-primary: #007bff !important;
-	--text-secondary: #6c757d!important;
-	--bg-primary: #007bff!important;
-	--bg-secondary: #6c757d!important;
+	--text-primary: #760612 !important;
+	--text-secondary: #aa7b51!important;
+	--bg-primary: #760612!important;
+	--bg-secondary: #aa7b51!important;
 }
 /* --- tag section --- */
+strong{
+	font-weight: normal;
+}
+
+/* --- colors --- */
+.text-primary{
+	color: var(--text-primary)!important;
+}
+.text-secondary{
+	color: var(--text-secondary)!important;
+}
+.bg-primary{
+	background-color: var(--bg-primary)!important;
+}
+.bg-secondary{
+	background-color: var(--bg-secondary)!important;
+}
+
+/* --- font size --- */
+.font-16{
+	font-size: 16px!important;
+}
+.font-lg{
+	font-size: 48px!important;
+}
+p, #processos li{
+	font-size: 18px;
+}
+
+h2, p, nav li, #home span{
+	letter-spacing: 2px;
+}
+a.text-secondary:focus,
+a.text-secondary:hover{
+	color: var(--text-primary)!important;
+}
+
+
 .height-full{
 	height: 100vh;	
 }
@@ -20,14 +67,12 @@
 .rounded2{
 	border-radius: 15px;	
 }
-.img-planta img{
+.img-folhas-cafe img{
 	position: absolute;
-	top: 480px;
-	right: 0;
-	width: 450px;
-	height: 300px;
-	opacity: 0.5;
-	z-index: 2;
+	top: 430px;
+	right: 0px;
+	width: 400px;
+	z-index: 99;
 }
 
 /* --- menu --- */
@@ -37,8 +82,9 @@ nav.mt-md-5{
 }
 
 /* --- carousel/slide home --- */
-.carousel-fade{
-	width: 70%;
+#home span.h2,
+#home span.display-3{
+	line-height: 0.5;
 }
 .carousel-inner{
 	text-align: center;
@@ -47,33 +93,43 @@ nav.mt-md-5{
 	position: relative;
 	margin-top: 30px !important;
 }
+.carousel-indicators .active{
+	background-color: var(--bg-primary);
+}
 .carousel-indicators li{
 	width: 12px;
 	height: 12px;
 	border-radius: 50%;
 	margin: 0 4px;
+	background-color: var(--bg-secondary);
 }
 
 /* --- header and footer --- */
 .bg-img-primary {
   	position: relative;
   	/*color: white;*/
-  	background: -webkit-linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),url(imagens/slides/banner-05.jpg) no-repeat center center;
-    background: -o-linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),url(imagens/slides/banner-05.jpg) no-repeat center center;
-    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),url(imagens/slides/banner-05.jpg) no-repeat center center;
+  	background: url(../img/bg-img-primary.png) no-repeat center center;
+    background: url(../img/bg-img-primary.png) no-repeat center center;
+    background: url(../img/bg-img-primary.png) no-repeat center center;
     background-size: cover;	
 }
 
 /* --- Sobre --- */
 #sobre .img-bg-01{
 	position: relative;
+	width: 440px;
 	height: 100%;
+	object-fit: cover;
 }
 #sobre .img-bg-02{
 	position: absolute;
+	width: 380px;
 	top: 10%;
 	bottom: 50%;
-	left: 40%;
+	left: 35%;
+}
+#sobre .w-60{
+	width: 60%;
 }
 
 /* --- Instalações --- */
@@ -88,20 +144,21 @@ nav.mt-md-5{
 }
 #instalacoes .img-bg-01{
 	position: relative;
+	width: 550px;
 	height: 100%;
+	object-fit: cover;
 }
 #instalacoes .img-bg-02{
 	position: absolute;
+	width: 550px;
 	top: 5%;
 	bottom: 50%;
+	right: 15%;
 }
 
 /* --- Processos --- */
-#processos{
-	background-color: #eee;
-}
 #processos .bg-img-processos{
-	background: url(https://via.placeholder.com/1920x220?text=Imagem+de+fundo);
+	background: url(../img/img-bg-processos.png);
 	background-position: center center;
 	background-size: cover;
 	height: 230px;
@@ -116,11 +173,12 @@ nav.mt-md-5{
 	margin: 0 0 0 200px;
 }
 #processos hr.hr2{
+	position: absolute;
 	width: 300px;
 	border-top: 5px solid;
 	margin-top: -3px;
-	margin-left: auto;
-	margin-right: auto;
+	left: 40%;
+	right: 40%;
 }
 #processos hr.hr3{
 	width: 300px;
@@ -153,6 +211,17 @@ nav.mt-md-5{
 	width: 75%;
 	margin: 0 auto;
 }
+#contato img.img-galho-02{
+	position: absolute;
+	top: 100px;
+	left: 0;
+	right: 0;
+	width: 200px;
+}
+::placeholder{
+  color: var(--text-primary)!important;
+  opacity: 1!important;
+}
 
 /* --- footer --- */
 footer .container{
@@ -177,7 +246,7 @@ footer .container{
 }
 #buttonTop:hover {
   cursor: pointer;
-  background-color: var(--text-primary);
+  background-color: var(--text-secondary)!important;
 }
 #buttonTop.show {
   opacity: 1;
@@ -186,9 +255,9 @@ footer .container{
 
 /* --- Barra de rolagem do navegador --- */
 ::-webkit-scrollbar{width: 10px;height: 10px;}
-::-webkit-scrollbar-track-piece {background-color: var(--primary);}
-::-webkit-scrollbar-thumb:vertical{background-color: var(--secondary);height: 5px;}
-::-webkit-scrollbar-thumb:horizontal{background-color: var(--primary);width: 5px;}
+::-webkit-scrollbar-track-piece {background-color: var(--bg-secondary);}
+::-webkit-scrollbar-thumb:vertical{background-color: var(--bg-primary);height: 5px;}
+::-webkit-scrollbar-thumb:horizontal{background-color: var(--bg-primary);width: 5px;}
 
 /* --- dispositivos com largura de até 768px --- */
 @media screen and (max-width: 768px){
@@ -196,20 +265,37 @@ footer .container{
 	.height-full{
 		height: auto!important;	
 	}
+
 	/* --- galho --- */
-	.img-planta img{
+	.img-folhas-cafe img{
 		position: absolute;
 		top: 520px;
 		width: 150px;
 		height: auto;
 	}
+
 	/* --- home --- */
-	#home h1.display-3{
-		font-size: 40px;
+	.font-lg{
+		font-size: 30px!important;
+	}
+	#home .display-3{
+		font-size: 50px!important;
+	}
+	#home .h3{
+		font-size: 28px;
+	}
+	#home .h1{
+		font-size: 30px;	
 	}
 	#indicators{
 		margin: 0 auto;
 	}
+
+	/* --- folhas cafe --- */
+	.img-folhas-cafe img{
+		top: 650px;
+	}
+
 	/* --- sobre --- */
 	#sobre .col-12{
 		height: auto;
@@ -223,10 +309,11 @@ footer .container{
 		right: 10%;
 		width: 80%;
 	}
-	#sobre .w-50{
+	#sobre .w-60{
 		width: 100%!important;
-		margin-left: 40px;
+		text-align: justify;
 	}
+
 	/* --- instalacoes --- */
 	#instalacoes h2.h1{
 		margin: 40px 0 0 50px;
@@ -235,15 +322,26 @@ footer .container{
 	#instalacoes hr{
 		width: 50px;
 	}
-	#instalacoes img.img-bg-01{
+	#instalacoes .row .col-md-3 img,
+	#instalacoes .row br{
+		display: none;
+	}
+	#instalacoes h2{
+		font-size: 16px;
+	}
+	#instalacoes span.bg-secondary{
+		background-color: transparent!important;
+	}
+	#instalacoes .img-bg-01{
 		height: auto;
 	}
-	#instalacoes img.img-bg-02{
-		top: 15%;
-		left: 5%;
-		right: 5%;
-		width: 90%;
+	#instalacoes .img-bg-02{
+		top: 10%;
+		left: 10%;
+		right: 10%;
+		width: 80%;
 	}
+
 	/* --- Processos --- */
 	#processos h2.h1{
 		margin: 0 0 0 50px;
@@ -283,5 +381,9 @@ footer .container{
 	}
 	#contato .btn{
 		width: 100%;
+	}
+	#contato img.img-galho-02{
+		left: -105px;
+		width: 150px;
 	}
 }

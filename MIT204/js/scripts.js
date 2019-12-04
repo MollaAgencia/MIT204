@@ -1,7 +1,7 @@
 // Scroll menu
 var navbar = $('nav');
 $(window).scroll(function() {
-  if ($(window).scrollTop() > 200) {
+  if ($(window).scrollTop() > 80) {
     navbar.addClass('mt-md-2').removeClass('mt-md-5');
   } else {
     navbar.addClass('mt-md-5').removeClass('mt-md-2');
