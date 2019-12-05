@@ -92,16 +92,3 @@ $(document).ready( function(){
 
     });
 });
-
-
-// Definir linguagem de acordo com o navegador
-// var userLang = navigator.language || navigator.userLanguage; 
-// console.log("The language is: " + userLang);
-// if (userLang == 'pt-BR') {
-//     var novaURL = "index.html";
-//     $(window.document.location).attr('href',novaURL);
-// }
-// else {
-//     var novaURL = "english.html";
-//     $(window.document.location).attr('href',novaURL);
-// }

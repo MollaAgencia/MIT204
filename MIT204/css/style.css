@@ -69,10 +69,10 @@ a.text-secondary:hover{
 }
 .img-folhas-cafe img{
 	position: absolute;
-	top: 430px;
-	right: 0px;
-	width: 400px;
-	z-index: 99;
+	width: 380px;
+	top: 450px;
+	right: -20px;
+	z-index: 9;
 }
 
 /* --- menu --- */
@@ -107,7 +107,6 @@ nav.mt-md-5{
 /* --- header and footer --- */
 .bg-img-primary {
   	position: relative;
-  	/*color: white;*/
   	background: url(../img/bg-img-primary.png) no-repeat center center;
     background: url(../img/bg-img-primary.png) no-repeat center center;
     background: url(../img/bg-img-primary.png) no-repeat center center;
@@ -266,14 +265,6 @@ footer .container{
 		height: auto!important;	
 	}
 
-	/* --- galho --- */
-	.img-folhas-cafe img{
-		position: absolute;
-		top: 520px;
-		width: 150px;
-		height: auto;
-	}
-
 	/* --- home --- */
 	.font-lg{
 		font-size: 30px!important;
@@ -290,11 +281,11 @@ footer .container{
 	#indicators{
 		margin: 0 auto;
 	}
-
 	/* --- folhas cafe --- */
 	.img-folhas-cafe img{
-		top: 650px;
-	}
+		width: 180px;
+		top: 90%;
+	}	
 
 	/* --- sobre --- */
 	#sobre .col-12{
@@ -367,6 +358,9 @@ footer .container{
 	#tratamento h2.h1{
 		font-size: 30px;
 	}
+	#tratamento .container .h4{
+		font-size: 18px;
+	}
 	/* --- Contato --- */
 	#contato hr{
 		width: 50px;
@@ -385,5 +379,34 @@ footer .container{
 	#contato img.img-galho-02{
 		left: -105px;
 		width: 150px;
+	}
+}
+
+
+/* --- dispositivos com largura mínima de 992px até 1130px --- */
+@media (min-width: 992px) and (max-width: 1130px){
+	nav li.mx-md-3{
+		margin-left: 0px!important;
+		margin-right: 0px!important;
+	}
+}
+
+/* --- dispositivos com largura mínima de 1440px --- */
+@media screen and (min-width: 1440px){
+	body{
+		background-color: #eee;
+		max-width: 1400px;
+		width: 100%;
+	    margin-right: auto;
+	    margin-left: auto;
+	}
+	/* --- folhas cafe --- */
+	.img-folhas-cafe img{
+		top: 75%;
+	}
+	#sobre,
+	#instalacoes,
+	#tratamento{
+		background-color: #fff;
 	}
 }

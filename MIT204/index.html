@@ -105,11 +105,10 @@
           </div>
         </div>
       </div>
+      <div class="img-folhas-cafe">
+        <img src="img/galhos-01.png" alt="Galhos de café" title="Galhos de café">
+      </div>
     </section>
-
-    <div class="img-folhas-cafe">
-      <img src="img/galhos-01.png" alt="Galhos de café" title="Galhos de café" class="img-fluid">
-    </div>
 
     <!-- sobre -->
     <section id="sobre" class="mb-md-5">
@@ -187,7 +186,7 @@
     </section>
 
     <!-- processos -->
-    <section id="processos" class="height-full border-lg">
+    <section id="processos" class="border-lg">
       <div class="bg-img-processos">
         <hr class="hr1 text-white" data-aos="fade-right">
         <h2 class="h1 text-uppercase text-white">Processos</h2>
@@ -223,8 +222,10 @@
     <section id="tratamento" class="height-full">
       <div class="d-flex h-100">
         <div class="mx-auto my-auto">
-          <h2 class="h1 text-center text-primary my-4">Tratamento correto e seguro antes de chegar à sua casa.</h2>
-          <p class="h4 text-center text-secondary">Com a exigência cada vez mais alta da população em querer adquirir um produto de<br>qualidade, a rastreabilidade dos grãos acontece a partir de um minucioso processo:</p>
+          <div class="container">
+            <h2 class="h1 text-center text-primary my-4">Tratamento correto e seguro antes de chegar à sua casa.</h2>
+            <p class="h4 text-justify text-md-center text-secondary">Com a exigência cada vez mais alta da população em querer adquirir um produto de<br>qualidade, a rastreabilidade dos grãos acontece a partir de um minucioso processo:</p>
+          </div>
 
           <div class="d-flex mx-auto w-75">
             <div class="row pt-4">
@@ -278,7 +279,9 @@
               <textarea name="txtMensagem" id="txtMensagem" rows="4" class="w-100 bg-transparent form-control form-control-lg mb-3 border-dark" valida-mensagem placeholder="Mensagem..." required></textarea>
               <div id="alertMensagem" class="alertError"></div>
               
-              <input type="button" id="btnEnviar" value="Enviar" class="btn btn-lg bg-primary text-white rounded">
+              <!-- <input type="button" id="btnEnviar" value="Enviar" class="btn btn-lg bg-primary text-white rounded"> -->
+              <input type="button" id="btnEnviarFake" value="Enviar" class="btn btn-lg bg-primary text-white rounded">
+              <div id="alertFake" class="mt-2 mt-md-0 alert alert-danger text-center d-none">E-mail não enviado. Site ainda em desenvolvimento.</div>
               
               <div id="loading"></div>
               <div id="sucesso"></div>
@@ -295,8 +298,7 @@
       </div>
     </footer>
 
-    <!-- JavaScript (Opcional) -->
-    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+    <!-- JavaScript -->
     <script src="js/jquery-3.3.1.slim.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -315,6 +317,13 @@
     <!-- others scripts -->
     <script src="js/mascaraValidacao.js"></script>
     <script src="js/scripts.js"></script>
+    
+    <!-- Alert fake -->
+    <script>
+      $('#btnEnviarFake').bind('click', function(){
+        $('#alertFake').removeClass('d-none');
+      });
+    </script>
 
   </body>
 </html>
