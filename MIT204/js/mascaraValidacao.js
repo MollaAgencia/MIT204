@@ -41,7 +41,7 @@ $(".alertError").css({
 });
 
 // Validar CPF
-$("[valida-cpf]").blur(function(){
+$("[valida-cpf]").bind('blur keyup', function(){
     var cpf = this.value;
     cpf = cpf.replace(".", "");
     cpf = cpf.replace(".", "");
@@ -95,7 +95,7 @@ $("[valida-cpf]").blur(function(){
 });
 
 // Validar Nome
-$("[valida-nome]").blur(function(){
+$("[valida-nome]").bind('blur keyup', function(){
     var nome = this.value;
     if (nome.length <= 3) {
         $("#alertNOME").removeClass("d-none").html("<p class='alertError'>Nome incompleto.</p>");
@@ -108,7 +108,7 @@ $("[valida-nome]").blur(function(){
 });
 
 // Validar E-mail
-$("[valida-email]").blur(function(){
+$("[valida-email]").bind('blur keyup', function(){
     usuario = this.value.substring(0, this.value.indexOf("@"));
     dominio = this.value.substring(this.value.indexOf("@")+ 1, this.value.length);
     if ((usuario.length >=1) &&
@@ -130,7 +130,7 @@ $("[valida-email]").blur(function(){
 });
 
 // Validar assunto
-$("[valida-assunto]").blur(function(){
+$("[valida-assunto]").bind('blur keyup', function(){
     var assunto = this.value;
     if (assunto.length <= 3) {
         $("#alertAssunto").removeClass("d-none").html("<p class='alertError'>Preencha o assunto.</p>");
@@ -143,7 +143,7 @@ $("[valida-assunto]").blur(function(){
 });
 
 // Validar mensagem / observação
-$("[valida-mensagem]").blur(function(){
+$("[valida-mensagem]").bind('blur keyup', function(){
     var mensagem = this.value;
     if (mensagem.length <= 3) {
         $("#alertMensagem").removeClass("d-none").html("<p class='alertError'>Deixe sua mensagem.</p>");
