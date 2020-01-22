@@ -5,14 +5,16 @@
     //E-mail para o cliente
     $mail->IsSMTP();
 	$mail->CharSet = 'UTF-8';
-	//$mail->True;
-	$mail->Host = 'SMTP-CLIENTE'; //smtp.gmail.com(gmail), smtplw.com.br(locaweb), smtp.live.com(hotmail)
+	// $mail->True;
+	$mail->SMTPDebug = 1;
+	$mail->SMTPSecure = 'ssl';
+	$mail->Host = 'SMTP-DO-CLIENTE'; //smtp.gmail.com(gmail), smtplw.com.br(locaweb), smtp.live.com(hotmail)
 	$mail->SMTPSecure = 'tls';
 	$mail->Port = 587; 
 	$mail->SMTPAuth = true;
-	$mail->Username = 'EMAIL-CLENTE';
-	$mail->Password = 'SENHA-EMAIL-CLIENTE';
-	$mail->From = 'EMAIL-CLENTE';
+	$mail->Username = 'EMAIL-DO-CLIENTE';
+	$mail->Password = 'SENHA-DO-EMAIL';
+	$mail->From = 'EMAIL-DO-CLIENTE';
 
 	$mail->FromName = 'NOME-DO-SITE';
 	$mail->AddAddress($mailCopia, $nome); // Email e nome de quem receberá //Responder

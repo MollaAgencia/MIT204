@@ -15,11 +15,17 @@ $(document).ready(function() {
 		dots: true,
 		infinite: true,
 		autoplay: false,
-		// autoplaySpeed: 1000,
-		// speed: 500,
 		fade: true,
 		cssEase: 'linear'
 	});
+});
+
+// Animações - desativa mobile
+AOS.init({
+  disable: 'mobile',
+  delay: 0,
+  duration: 1200,
+  once: true,
 });
 
 
@@ -53,23 +59,41 @@ btn.on('click', function(e) {
 });
 
 
-// Chamada Ajax
+// Chamada Ajax para o envio de email
 $(document).ready( function(){
     $('#btnEnviar').click( function(){
 
       var nome     = $("[valida-nome]").val();
-      var cpf      = $("[valida-cpf]").val();
       var email    = $("[valida-email]").val();
-      var assunto  = $("[valida-assunto]").val();
+      var destino  = $("[valida-assunto]").val();
       var mensagem = $("[valida-mensagem]").val();
 
-      if(nome == '' || cpf == '' || email == '' || assunto == '' || mensagem == ''){
-           Swal.fire('Existem campos que não foram preenchidos.');
-           return false;
-       }
+      if(nome == '' || email == '' || destino == '' || mensagem == ''){
+          Swal.fire('Existem campos que não foram preenchidos.');
+          return false;
+      }
+
+      usuario = document.getElementById('txtEmail').value.substring(0, document.getElementById('txtEmail').value.indexOf("@"));
+      dominio = document.getElementById('txtEmail').value.substring(document.getElementById('txtEmail').value.indexOf("@")+ 1, document.getElementById('txtEmail').value.length);
+      if ((usuario.length >=1) &&
+          (dominio.length >=3) && 
+          (usuario.search("@")==-1) && 
+          (dominio.search("@")==-1) &&
+          (usuario.search(" ")==-1) && 
+          (dominio.search(" ")==-1) &&
+          (dominio.search(".")!=-1) &&      
+          (dominio.indexOf(".") >=1)&& 
+          (dominio.lastIndexOf(".") < dominio.length - 1)) {
+          // $("#alertEmail").addClass("d-none");
+          // return true;
+      }else{
+          Swal.fire('E-mail invalido.');
+          $("[valida-email]").focus();
+          return false;
+      }
 
       /* construindo url */
-      var urlData = "&nome=" + nome + "&cpf=" + cpf + "&email=" + email + "&assunto=" + assunto + "&mensagem=" + mensagem ;
+      var urlData = "&nome=" + nome + "&email=" + email + "&destino=" + destino + "&mensagem=" + mensagem ;
 
       /* Ajax */
       $.ajax({
@@ -77,13 +101,13 @@ $(document).ready( function(){
         url: "./email.php", /* endereço do script PHP */
         async: true,
         data: urlData, /* informa Url */
+        beforeSend: function() { /* antes de enviar */
+          $('#loading').removeClass('d-none').html('<div class="alert alert-info text-center mt-2 mt-md-0"><i class="fa fa-spinner fa-spin"></i><span> Enviando...</span></div>');
+        },
         success: function(data) { /* sucesso */
           // $("#formContato")[0].reset();
           $('#sucesso').html('<div class="alert alert-primary text-center mt-2 mt-md-0">Mensagem enviada com sucesso!</div>');
-          setTimeout(function(){$('#sucesso').fadeOut("slow");},6000);
-        },
-        beforeSend: function() { /* antes de enviar */
-          $('#loading').removeClass('d-none').html('<div class="alert alert-info text-center mt-2 mt-md-0"><i class="fa fa-spinner fa-spin"></i><span> Enviando...</span></div>');
+          setTimeout(function(){$('#sucesso').fadeOut("slow");},5000);
         },
         complete: function(){ /* completo */
           $('#loading').addClass('d-none');

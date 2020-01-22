@@ -1,412 +1,529 @@
 
 /* --- font --- */
-@font-face {
-    font-family: GillSansStd;
-    src: url('../font/GillSansStd.otf');
-    letter-spacing: 3px!important;
-}
-body{
-	font-family: GillSansStd, Arial;
-}
+	@font-face {
+	    font-family: GillSansStd;
+	    src: url('../font/GillSansStd.otf');
+	    letter-spacing: 3px!important;
+	}
+	body{
+		font-family: GillSansStd, Arial;
+	}
 
 /* --- root colors --- */
-:root{
-	--text-primary: #760612 !important;
-	--text-secondary: #aa7b51!important;
-	--bg-primary: #760612!important;
-	--bg-secondary: #aa7b51!important;
-}
+	:root{
+		--text-primary: #760612 !important;
+		--text-secondary: #aa7b51!important;
+		--bg-primary: #760612!important;
+		--bg-secondary: #aa7b51!important;
+	}
+
 /* --- tag section --- */
-strong{
-	font-weight: normal;
-}
+	strong{
+		font-weight: normal;
+	}
 
 /* --- colors --- */
-.text-primary{
-	color: var(--text-primary)!important;
-}
-.text-secondary{
-	color: var(--text-secondary)!important;
-}
-.bg-primary{
-	background-color: var(--bg-primary)!important;
-}
-.bg-secondary{
-	background-color: var(--bg-secondary)!important;
-}
+	.text-primary{
+		color: var(--text-primary)!important;
+	}
+	.text-secondary{
+		color: var(--text-secondary)!important;
+	}
+	.bg-primary{
+		background-color: var(--bg-primary)!important;
+	}
+	.bg-secondary{
+		background-color: var(--bg-secondary)!important;
+	}
 
 /* --- font size --- */
-.font-16{
-	font-size: 16px!important;
-}
-.font-lg{
-	font-size: 48px!important;
-}
-p, #processos li{
-	font-size: 18px;
-}
+	.font-16{
+		font-size: 16px!important;
+	}
+	p, #processos li{
+		font-size: 18px;
+	}
 
-h2, p, nav li, #home span{
-	letter-spacing: 2px;
-}
-a.text-secondary:focus,
-a.text-secondary:hover{
-	color: var(--text-primary)!important;
-}
+	h2, p, nav li, #home span{
+		letter-spacing: 2px;
+	}
+	a.text-secondary:focus,
+	a.text-secondary:hover{
+		color: var(--text-primary)!important;
+	}
 
-
-.height-full{
-	height: 100vh;	
-}
-.border-md{
-	border: 15px solid #fff;
-}
-.border-lg{
-	border: 20px solid #fff;
-}
-.rounded2{
-	border-radius: 15px;	
-}
-.img-folhas-cafe img{
-	position: absolute;
-	width: 380px;
-	top: 450px;
-	right: -20px;
-	z-index: 9;
-}
+/* --- other --- */
+	.height-full{
+		height: 100vh;	
+	}
+	.border-md{
+		border: 15px solid #fff;
+	}
+	.border-lg{
+		border: 20px solid #fff;
+	}
+	.rounded2{
+		border-radius: 15px;	
+	}
+	.img-folhas-cafe img{
+		position: absolute;
+		width: 380px;
+		top: 450px;
+		right: -20px;
+		z-index: 9;
+	}
 
 /* --- menu --- */
-nav.mt-md-2,
-nav.mt-md-5{
-	transition: .5s;
-}
+	nav.mt-md-2,
+	nav.mt-md-5{
+		transition: .5s;
+	}
 
 /* --- carousel/slide home --- */
-#home span.h2,
-#home span.display-3{
-	line-height: 0.5;
-}
-.carousel-inner{
-	text-align: center;
-}
-.carousel-indicators{
-	position: relative;
-	margin-top: 30px !important;
-}
-.carousel-indicators .active{
-	background-color: var(--bg-primary);
-}
-.carousel-indicators li{
-	width: 12px;
-	height: 12px;
-	border-radius: 50%;
-	margin: 0 4px;
-	background-color: var(--bg-secondary);
-}
+	#home span{
+		line-height: 0.9;
+	}
+	.carousel-inner{
+		text-align: center;
+	}
+	.carousel-indicators{
+		position: relative;
+		margin-top: 30px !important;
+	}
+	.carousel-indicators .active{
+		background-color: var(--bg-primary);
+	}
+	.carousel-indicators li{
+		width: 12px;
+		height: 12px;
+		border-radius: 50%;
+		margin: 0 4px;
+		background-color: var(--bg-secondary);
+	}
 
 /* --- header and footer --- */
-.bg-img-primary {
-  	position: relative;
-  	background: url(../img/bg-img-primary.png) no-repeat center center;
-    background: url(../img/bg-img-primary.png) no-repeat center center;
-    background: url(../img/bg-img-primary.png) no-repeat center center;
-    background-size: cover;	
-}
+	.bg-img-primary {
+	  	position: relative;
+	  	background: url(../img/bg-img-primary.png) no-repeat center center;
+	    background-size: cover;	
+	}
+
+/* --- banner central direito --- */
+	.banner-central-direito img{
+		position: absolute;
+		width: 520px;
+		top: 410px;
+		right: -20px
+	}
 
 /* --- Sobre --- */
-#sobre .img-bg-01{
-	position: relative;
-	width: 440px;
-	height: 100%;
-	object-fit: cover;
-}
-#sobre .img-bg-02{
-	position: absolute;
-	width: 380px;
-	top: 10%;
-	bottom: 50%;
-	left: 35%;
-}
-#sobre .w-60{
-	width: 60%;
-}
+	#sobre .img-bg-01{
+		position: relative;
+		width: 440px;
+		height: 100%;
+		object-fit: cover;
+	}
+	#sobre .img-bg-02{
+		position: absolute;
+		width: 360px;
+		top: 70px;
+		left: 180px;
+	}
 
 /* --- Instalações --- */
-#instalacoes h2.h1{
-	margin: 40px 0 0 200px;
-}
-#instalacoes hr{
-	width: 200px;
-	border-top: 5px solid;
-	margin: 50px 0 10px 0;
-	padding: 0px;
-}
-#instalacoes .img-bg-01{
-	position: relative;
-	width: 550px;
-	height: 100%;
-	object-fit: cover;
-}
-#instalacoes .img-bg-02{
-	position: absolute;
-	width: 550px;
-	top: 5%;
-	bottom: 50%;
-	right: 15%;
-}
-
-/* --- Processos --- */
-#processos .bg-img-processos{
-	background: url(../img/img-bg-processos.png);
-	background-position: center center;
-	background-size: cover;
-	height: 230px;
-	padding-top: 35px;
-}
-#processos hr.hr1{
-	width: 200px;
-	border-top: 5px solid;
-	margin: 0;
-}
-#processos h2.h1{
-	margin: 0 0 0 200px;
-}
-#processos hr.hr2{
-	position: absolute;
-	width: 300px;
-	border-top: 5px solid;
-	margin-top: -3px;
-	left: 40%;
-	right: 40%;
-}
-#processos hr.hr3{
-	width: 300px;
-	border-top: 5px solid;
-	margin-top: -38px;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-/* --- contato --- */
-#contato input{
-	border: none;
-	border-bottom: 1px solid;
-}
-#contato input,
-#contato textarea{
-	border-radius: 0;
-}
-#contato hr{
-	width: 200px;
-	border-top: 5px solid;
-	margin: 0;
-}
-#contato h2.h1{
-	margin: 0 0 0 200px;
-}
-#contato .alert{
-	font-size: 22px;
-	font-weight: bold;
-	width: 75%;
-	margin: 0 auto;
-}
-#contato img.img-galho-02{
-	position: absolute;
-	top: 100px;
-	left: 0;
-	right: 0;
-	width: 200px;
-}
-::placeholder{
-  color: var(--text-primary)!important;
-  opacity: 1!important;
-}
-
-/* --- footer --- */
-footer .container{
-	padding-top: 35px;
-	padding-bottom: 35px;
-}
-
-/* --- Button Scroll top --- */
-#buttonTop{
-  display: inline-block;
-  width: 50px;
-  height: 50px;
-  text-align: center;
-  border-radius: 50%;
-  position: fixed;
-  bottom: 15px;
-  right: 20px;
-  transition: background-color .3s, opacity .5s, visibility .5s;
-  opacity: 0;
-  visibility: hidden;
-  z-index: 999;
-}
-#buttonTop:hover {
-  cursor: pointer;
-  background-color: var(--text-secondary)!important;
-}
-#buttonTop.show {
-  opacity: 1;
-  visibility: visible;
-}
-
-/* --- Barra de rolagem do navegador --- */
-::-webkit-scrollbar{width: 10px;height: 10px;}
-::-webkit-scrollbar-track-piece {background-color: var(--bg-secondary);}
-::-webkit-scrollbar-thumb:vertical{background-color: var(--bg-primary);height: 5px;}
-::-webkit-scrollbar-thumb:horizontal{background-color: var(--bg-primary);width: 5px;}
-
-/* --- dispositivos com largura de até 768px --- */
-@media screen and (max-width: 768px){
-	/* --- height full --- */
-	.height-full{
-		height: auto!important;	
-	}
-
-	/* --- home --- */
-	.font-lg{
-		font-size: 30px!important;
-	}
-	#home .display-3{
-		font-size: 50px!important;
-	}
-	#home .h3{
-		font-size: 28px;
-	}
-	#home .h1{
-		font-size: 30px;	
-	}
-	#indicators{
-		margin: 0 auto;
-	}
-	/* --- folhas cafe --- */
-	.img-folhas-cafe img{
-		width: 180px;
-		top: 90%;
-	}	
-
-	/* --- sobre --- */
-	#sobre .col-12{
-		height: auto;
-	}
-	#sobre img.img-bg-01{
-		height: auto;
-	}
-	#sobre img.img-bg-02{
-		top: 8%;
-		left: 10%;
-		right: 10%;
-		width: 80%;
-	}
-	#sobre .w-60{
-		width: 100%!important;
-		text-align: justify;
-	}
-
-	/* --- instalacoes --- */
 	#instalacoes h2.h1{
-		margin: 40px 0 0 50px;
-		font-size: 30px;
+		margin: 40px 0 0 200px;
 	}
 	#instalacoes hr{
-		width: 50px;
-	}
-	#instalacoes .row .col-md-3 img,
-	#instalacoes .row br{
-		display: none;
-	}
-	#instalacoes h2{
-		font-size: 16px;
-	}
-	#instalacoes span.bg-secondary{
-		background-color: transparent!important;
+		width: 200px;
+		border-top: 5px solid;
+		margin: 50px 0 10px 0;
+		padding: 0px;
 	}
 	#instalacoes .img-bg-01{
+		position: relative;
+		width: 570px;
+		height: 655px;
+		object-fit: cover;
+	}
+	#instalacoes .img-bg-02{
+		position: absolute;
+		width: 550px;
+		top: 5%;
+		bottom: 50%;
+		right: 15%;
+	}
+
+/* --- Processos --- */
+	#processos .bg-img-processos{
+		background: url(../img/img-bg-processos.png);
+		background-position: center center;
+		background-size: cover;
+		height: 230px;
+		padding-top: 35px;
+	}
+	#processos .jumbotron{
+		background: url(../img/bg-processos.png);
+		background-position: center center;
+		background-size: cover;
+	}
+	#processos hr.hr1{
+		width: 200px;
+		border-top: 5px solid;
+		margin: 0;
+	}
+	#processos h2.h1{
+		margin: 0 0 0 200px;
+	}
+	#processos hr.hr2{
+		position: absolute;
+		width: 300px;
+		border-top: 5px solid;
+		margin-top: -3px;
+		left: 40%;
+		right: 40%;
+	}
+	#processos hr.hr3{
+		width: 300px;
+		border-top: 5px solid;
+		margin-top: -35px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+/* --- tratamento --- */
+	#tratamento .container img{
+		width: 450px;
+	}
+	#tratamento .position-left img{
+		margin-right: -20px;
+		margin-top: 20px;
+	}
+	#tratamento .position-right img{
+		margin-left: -40px;
+		margin-top: -60px;
+	}
+	#tratamento .balao-left-especial img{
+		width: 420px;
+		margin-right: 20px;
+	}
+	#tratamento .balao-right-especial img{
+		margin-left: -30px;
+	}
+
+/* --- contato --- */
+	#contato input{
+		border: none;
+		border-bottom: 1px solid;
+	}
+	#contato input,
+	#contato textarea{
+		border-radius: 0;
+	}
+	#contato hr{
+		width: 200px;
+		border-top: 5px solid;
+		margin: 0;
+	}
+	#contato h2.h1{
+		margin: 0 0 0 200px;
+	}
+	#contato .alert{
+		font-size: 22px;
+		font-weight: bold;
+		width: 75%;
+		margin: 0 auto;
+	}
+	#contato ::placeholder{
+	  color: var(--text-primary)!important;
+	  opacity: 1!important;
+	}
+
+/* --- footer --- */
+	footer{
+		background-color: #404040;
+	}
+	footer .container{
+		padding-top: 35px;
+		padding-bottom: 35px;
+	}
+
+/* --- Button Scroll top --- */
+	#buttonTop{
+	  display: inline-block;
+	  width: 50px;
+	  height: 50px;
+	  text-align: center;
+	  border-radius: 50%;
+	  position: fixed;
+	  bottom: 15px;
+	  right: 20px;
+	  transition: background-color .3s, opacity .5s, visibility .5s;
+	  opacity: 0;
+	  visibility: hidden;
+	  z-index: 999;
+	}
+	#buttonTop:hover {
+	  cursor: pointer;
+	  background-color: var(--text-secondary)!important;
+	}
+	#buttonTop.show {
+	  opacity: 1;
+	  visibility: visible;
+	}
+
+/* --- Barra de rolagem do navegador --- */
+	::-webkit-scrollbar{width: 10px;height: 10px;}
+	::-webkit-scrollbar-track-piece {background-color: var(--bg-secondary);}
+	::-webkit-scrollbar-thumb:vertical{background-color: var(--bg-primary);height: 5px;}
+	::-webkit-scrollbar-thumb:horizontal{background-color: var(--bg-primary);width: 5px;}
+
+
+@media screen and (min-width: 1367px){
+	body{
+		background-color: #f6f6f6;
+		max-width: 1366px;
+		margin: auto;
+		box-shadow: 0px 8px 10px #ccc;
+	}
+	section{
+		background-color: #fff;
+	}
+	.height-full{
+		height: auto;
+	}
+}
+
+@media screen and (max-width: 1366px){
+	.height-full{
+		height: auto;
+	}
+}
+
+@media screen and (max-width: 1024px){
+	.height-full{
+		height: auto;
+	}
+	/* --- banner central direito --- */
+	.banner-central-direito img{
+		width: 350px;
+		top: 470px;
+	}
+	/* --- Sobre --- */
+	#sobre .img-bg-01{
+		width: 400px;
+	}
+	#sobre .img-bg-02{
+		width: 350px;
+		left: 140px;
+	}
+	#sobre .w-75{
+		width: 80%!important;
+	}
+	#sobre .h1{
+		font-size: 32px;
+	}
+	/* --- Instalações --- */
+	#instalacoes h2.h1{
+		font-size: 32px;
+		padding-bottom: 30px;
+	}
+	#instalacoes h2.h4{
+		font-size: 19px;
+	}
+	#instalacoes .img-bg-01{
+		width: 470px;
 		height: auto;
 	}
 	#instalacoes .img-bg-02{
-		top: 10%;
-		left: 10%;
-		right: 10%;
-		width: 80%;
+		right: 8%;
 	}
-
 	/* --- Processos --- */
-	#processos h2.h1{
-		margin: 0 0 0 50px;
+	#processos .jumbotron h2{
 		font-size: 30px;
 	}
-	#processos hr.hr1{
-		width: 50px;
+	/* --- tratamento --- */
+	#tratamento p.h4{
+		font-size: 21px;
 	}
-	#processos hr.hr2,
-	#processos hr.hr3{
-		width: 100px;
+}
+
+@media screen and (max-width: 800px){
+	/* --- banner central direito --- */
+	.banner-central-direito img{
+		width: 350px;
+		top: 350px;
 	}
-	#processos hr.hr3{
-		margin-bottom: -2px;
+	/* --- Sobre --- */
+	#sobre .img-bg-01{
+		width: 350px;
 	}
+	#sobre .img-bg-02{
+		width: 300px;
+		left: 80px;
+	}
+	/* --- Instalações --- */
+	#instalacoes h2.h1{
+		margin: 0px 0 0 20px;
+	}
+	#instalacoes .img-bg-01{
+		width: 470px;
+		height: auto;
+	}
+	#instalacoes .img-bg-01{
+		width: 340px;
+		height: 100vh;
+	}
+	#instalacoes .img-bg-01{
+		right: 0%;
+		height: 100%;
+	}
+	/* --- Processos --- */
+	#processos h2.h1{
+		margin: 0px 0 0 20px;
+	}
+	#processos .jumbotron h2{
+		font-size: 30px;
+	}
+	/* --- tratamento --- */
+	#tratamento p.h4{
+		font-size: 21px;
+	}
+	/* --- tratamento --- */
+	#tratamento .position-left img{
+		margin-right: -10px;
+		/*margin-top: 20px;*/
+	}
+	#tratamento .position-right img{
+		margin-left: -10px;
+		margin-top: -60px;
+	}
+	/* --- contato --- */
+	#contato h2.h1{
+		margin: 0px 0 0 20px;
+	}
+}
+
+@media screen and (max-width: 600px){
+	/* --- home --- */
+	#home .ml-md-4 {
+		text-align: center;
+	}
+	/* --- banner central direito --- */
+	.banner-central-direito img{
+		display: none;
+	}
+	/* --- Sobre --- */
+	#sobre .img-bg-01{
+		width: 100%;
+		height: 580px;
+	}
+	#sobre .img-bg-02{
+		width: 320px;
+		text-align: center;
+		margin-top: -20px;
+		left: 20%;
+	}
+	#sobre .w-75{
+		width: 100%!important;
+	}
+
+	/* --- Instalações --- */
+	#instalacoes .h-75 img{
+		display: none;
+	}
+	#instalacoes .img-bg-01{
+		width: 100%;
+		height: 620px;
+		margin-top: 20px;
+	}
+	#instalacoes .img-bg-02{
+		width: 100%;
+		top: 6%;
+		right: 0%;
+		padding: 30px;
+	}
+	/* --- processos --- */
 	#processos .w-75{
 		width: 90%!important;
 	}
-	#processos h2{
-		font-size: 26px;
+	/* --- tratamento --- */
+	#tratamento .position-left img{
+		margin-right: 0px;
+		margin-top: 0px;
 	}
-	/* --- Tratamento --- */
-	#tratamento h2.h1{
-		font-size: 30px;
-	}
-	#tratamento .container .h4{
-		font-size: 18px;
-	}
-	/* --- Contato --- */
-	#contato hr{
-		width: 50px;
-	}
-	#contato h2.h1{
-		margin: 0 0 0 50px;
-		font-size: 30px;
-	}
-	#contato .alert{
-		font-size: 16px;
-		width: 100%;
-	}
-	#contato .btn{
-		width: 100%;
-	}
-	#contato img.img-galho-02{
-		left: -105px;
-		width: 150px;
+	#tratamento .position-right img{
+		margin-left: 0px;
+		margin-top: 0px;
 	}
 }
 
+@media screen and (max-width: 480px){
+	/* --- home --- */
+	#home .ml-md-4 {
+		text-align: center;
+	}
+	/* --- banner central direito --- */
+	.banner-central-direito img{
+		display: none;
+	}
+	/* --- Sobre --- */
+	#sobre .img-bg-01{
+		width: 100%;
+		height: 580px;
+	}
+	#sobre .img-bg-02{
+		width: 320px;
+		text-align: center;
+		margin-top: -20px;
+	}
+	#sobre .w-75{
+		width: 100%!important;
+	}
 
-/* --- dispositivos com largura mínima de 992px até 1130px --- */
-@media (min-width: 992px) and (max-width: 1130px){
-	nav li.mx-md-3{
-		margin-left: 0px!important;
-		margin-right: 0px!important;
+	/* --- Instalações --- */
+	#instalacoes .h-75 img{
+		display: none;
+	}
+	#instalacoes .img-bg-01{
+		width: 100%;
+		height: 500px;
+		margin-top: 20px;
+	}
+	#instalacoes .img-bg-02{
+		width: 100%;
+		top: 6%;
+		right: 0%;
+		padding: 30px;
+	}
+	/* --- processos --- */
+	#processos .w-75{
+		width: 90%!important;
+	}
+	/* --- tratamento --- */
+	#tratamento .position-left img{
+		margin-right: 0px;
+		margin-top: 0px;
+	}
+	#tratamento .position-right img{
+		margin-left: 0px;
+		margin-top: 0px;
 	}
 }
 
-/* --- dispositivos com largura mínima de 1440px --- */
-@media screen and (min-width: 1440px){
-	body{
-		background-color: #eee;
-		max-width: 1400px;
-		width: 100%;
-	    margin-right: auto;
-	    margin-left: auto;
+@media screen and (max-width: 320px){
+	/* --- sobre --- */
+	#sobre .img-bg-02{
+		width: 80%;
+		left: 10%;
+		right: 10%;
+		margin-top: -20px;
 	}
-	/* --- folhas cafe --- */
-	.img-folhas-cafe img{
-		top: 75%;
-	}
-	#sobre,
-	#instalacoes,
-	#tratamento{
-		background-color: #fff;
+	/* --- instalações --- */
+	#instalacoes h2.h4 {
+    	font-size: 16px;
+    }
+    #instalacoes .img-bg-01{
+		height: 300px;
 	}
 }

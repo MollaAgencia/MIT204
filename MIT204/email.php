@@ -8,8 +8,7 @@ if ($_POST)
 	//envia o e-mail para o visitante do site
 	$mailCopia = $_POST['email'];
 	$nome = $_POST['nome'];
-	$cpf = $_POST['cpf'];
-	$assunto = $_POST['assunto'];
+	$destino = $_POST['destino'];
 	$mensagem = $_POST['mensagem'];
 
 	$assunto = "Olá, recebemos sua mensagem!";
@@ -23,9 +22,8 @@ if ($_POST)
 	$mensagem = "<h3>Recebemos uma nova mensagem no site</h3>
 
 	<strong>Nome:</strong> $_POST[nome]<br/>
-	<strong>CPF:</strong> $_POST[cpf]<br/>
 	<strong>E-mail:</strong> $_POST[email]<br/>
-	<strong>Assunto:</strong> $_POST[assunto]<br/>
+	<strong>Destino Mensagem:</strong> $_POST[destino]<br/>
 	<strong>Mensagem:</strong> $_POST[mensagem]";
 	
 	include("envioEmpresa.php");
