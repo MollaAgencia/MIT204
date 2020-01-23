@@ -192,23 +192,24 @@
 	}
 
 /* --- tratamento --- */
-	#tratamento .container img{
+	#tratamento .baloes .balao{
 		width: 450px;
 	}
-	#tratamento .position-left img{
-		margin-right: -20px;
-		margin-top: 20px;
+	#tratamento .position-left{
+		margin-right: -10px;
+		margin-top: 30px;
 	}
-	#tratamento .position-right img{
-		margin-left: -40px;
+	#tratamento .position-right{
+		margin-left: -20px;
 		margin-top: -60px;
 	}
-	#tratamento .balao-left-especial img{
-		width: 420px;
-		margin-right: 20px;
+	#tratamento .balao-left-especial{
+		width: 420px!important;
+		margin-right: 30px;
 	}
-	#tratamento .balao-right-especial img{
-		margin-left: -30px;
+	#tratamento .balao-right-especial{
+		margin-top: -40px;
+		margin-left: -10px;
 	}
 
 /* --- contato --- */
@@ -343,6 +344,12 @@
 		font-size: 30px;
 	}
 	/* --- tratamento --- */
+	#tratamento .baloes .balao{
+		width: 355px;
+	}
+	#tratamento .balao-left-especial{
+		width: 320px!important;
+	}
 	#tratamento p.h4{
 		font-size: 21px;
 	}
@@ -390,13 +397,17 @@
 		font-size: 21px;
 	}
 	/* --- tratamento --- */
-	#tratamento .position-left img{
-		margin-right: -10px;
-		/*margin-top: 20px;*/
+	#tratamento .position-left{
+		margin-right: -20px;
 	}
-	#tratamento .position-right img{
-		margin-left: -10px;
-		margin-top: -60px;
+	#tratamento .position-right{
+		margin-left: -20px;
+		margin-top: -40px;
+	}
+	#tratamento .balao-mobile{
+		border: 2px solid #000;
+		border-radius: 40px;
+		margin-bottom: 15px;
 	}
 	/* --- contato --- */
 	#contato h2.h1{
@@ -448,11 +459,11 @@
 		width: 90%!important;
 	}
 	/* --- tratamento --- */
-	#tratamento .position-left img{
+	#tratamento .position-left{
 		margin-right: 0px;
 		margin-top: 0px;
 	}
-	#tratamento .position-right img{
+	#tratamento .position-right{
 		margin-left: 0px;
 		margin-top: 0px;
 	}
@@ -501,11 +512,11 @@
 		width: 90%!important;
 	}
 	/* --- tratamento --- */
-	#tratamento .position-left img{
+	#tratamento .position-left{
 		margin-right: 0px;
 		margin-top: 0px;
 	}
-	#tratamento .position-right img{
+	#tratamento .position-right{
 		margin-left: 0px;
 		margin-top: 0px;
 	}
