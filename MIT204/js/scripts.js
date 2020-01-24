@@ -37,9 +37,8 @@ $(function() {
     e.preventDefault();
     var target = this.hash;
     var $target = $(target);
-    // console.log($target.offset().top); 
-    $("html, body").stop().animate({"scrollTop": ($target.offset().top - ($("nav").hasClass("fixed-top") ? $("nav").height() : 100 ))}, 900, "swing", null);
-    console.log($target.offset().top);
+    $("html, body").animate({"scrollTop": ($target.offset().top) - ($("nav").hasClass("fixed-top")) }, 900, "swing", null);
+      console.log($target.offset().top);
   });
 });
 
