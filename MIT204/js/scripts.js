@@ -30,16 +30,15 @@ AOS.init({
 
 
 // Transição suave entre os menus
-$(function() {
+// $(function() {
+// });
   // Handler for .ready() called.
   // Deslize suave
-  $(".desliza").on("click", function (e) {
-    e.preventDefault();
-    var target = this.hash;
-    var $target = $(target);
-    $("html, body").animate({"scrollTop": ($target.offset().top) - ($("nav").hasClass("fixed-top")) }, 900, "swing", null);
-      console.log($target.offset().top);
-  });
+$(".desliza").on("click", function (e) {
+  e.preventDefault();
+  var target = this.hash;
+  var $target = $(target);
+  $("html, body").animate({"scrollTop": ($target.offset().top) - ($("nav").hasClass("fixed-top")) -20 }, 900, "swing", null);
 });
 
 
